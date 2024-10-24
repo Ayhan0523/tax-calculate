@@ -1,4 +1,4 @@
-require_relative '../goods_tax_strategy'
+require_relative '../Strategy/goods_tax_strategy'
 
 RSpec.describe GoodsTaxStrategy do
   let(:vat_service) { double("VATService") }

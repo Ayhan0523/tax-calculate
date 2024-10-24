@@ -1,7 +1,7 @@
-require_relative '../digital_service_tax_strategy'
+require_relative '../Strategy/digital_service_tax_strategy'
 require_relative '../transaction'
 require_relative '../vat_service'
-require_relative '../tax_strategy'
+require_relative '../Strategy/tax_strategy'
 
 RSpec.describe DigitalServiceTaxStrategy do
   let(:vat_service) { VatService.new }
