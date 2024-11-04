@@ -1,6 +1,11 @@
 class Transaction
-	attr_accessor :buyer_country, :buyer_type, :service_location, :type
-	
+	SERVICE_TYPES = [
+		PHYSICAL = :physical,
+		DIGITAL = :digital,
+		ONSITE = :onsite
+	]
+	attr_accessor :buyer_country, :buyer_type, :service_location, :type, :status
+
 	def initialize(buyer_country, buyer_type, service_location, type)
 		@buyer_country = buyer_country
 		@buyer_type = buyer_type
