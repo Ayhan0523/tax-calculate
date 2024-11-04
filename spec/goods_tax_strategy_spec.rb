@@ -1,4 +1,4 @@
-require_relative '../Strategy/goods_tax_strategy'
+require_relative '../tax_strategy/goods_tax_strategy'
 
 RSpec.describe GoodsTaxStrategy do
   let(:vat_service) { double("VATService") }
@@ -12,7 +12,7 @@ RSpec.describe GoodsTaxStrategy do
         allow(vat_service).to receive(:fetch_rate).with("ES").and_return(21)
 
         result = goods_tax_strategy.calculate(transaction, vat_service)
-        
+
         expect(result).to eq(21)
       end
     end

@@ -1,5 +1,5 @@
-require_relative '../Strategy/onsite_service_tax_strategy'
-require_relative '../Strategy/tax_strategy'
+require_relative '../tax_strategy/onsite_service_tax_strategy'
+require_relative '../tax_strategy/tax_strategy'
 
 RSpec.describe OnsiteServiceTaxStrategy do
   let(:vat_service) { double("VATService") }

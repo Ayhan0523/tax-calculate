@@ -1,7 +1,7 @@
-require_relative '../Strategy/tax_strategy'
-require_relative '../Strategy/onsite_service_tax_strategy'
-require_relative '../Strategy/digital_service_tax_strategy'
-require_relative '../Strategy/goods_tax_strategy'
+require_relative '../tax_strategy/tax_strategy'
+require_relative '../tax_strategy/onsite_service_tax_strategy'
+require_relative '../tax_strategy/digital_service_tax_strategy'
+require_relative '../tax_strategy/goods_tax_strategy'
 require_relative '../tax_calculator'
 require_relative '../transaction'
 require_relative '../vat_service'
@@ -50,7 +50,7 @@ RSpec.describe 'Tax Calculation System' do
   describe 'OnsiteServiceTaxStrategy' do
     let(:onsite_service_tax_strategy) { OnsiteServiceTaxStrategy.new }
     let(:tax_calculator) { TaxCalculator.new(onsite_service_tax_strategy, vat_service) }
-    
+
     let(:service) { double("Service") }
     let(:transaction) { double("Transaction", service: service) }
 
